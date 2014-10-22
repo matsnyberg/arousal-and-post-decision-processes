@@ -2,30 +2,30 @@
 
 
 \begin{figure}
-  \label{fig:circumflex}
   \begin{center}
     \begin{tikzpicture}[>=stealth',shorten >=0pt,node distance=1cm,
-        every label/.style=label distance=10mm
-      ]
-      \node [label={45:Aroused}] (aroused) at (90:3) {*};
-      \node [label={90:Pleased}] (pleased) at (0:3) {*};
-      \node [label={90:Unhappy}] (unhappy) at (180:3) {*};
-      \node [label={315:Calm}] (calm) at (270:3) {*};
-      
-      \node [label={150:elated}] (elated) at (45:3) {*};
-      \node [label={30:distressed}] (distressed) at (135:3) {*};
-      \node [label={30:bored}] (bored) at (225:3) {*};
-      \node [label={150:calmed}] (calmed) at (315:3) {*};
-      
-      \draw [thin,draw=gray!75] ($(unhappy)+(-0.2,0)$) -- ($(pleased)+(0.2,0)$)
-      ($(calm)+(0,-0.2)$) -- ($(aroused)+(0,0.2)$);
-      
+    every label/.style=label distance=10mm
+]
+      \node [label={90:Aroused}] (aroused) at (90:3) {};
+      \node [label={90:Pleased}] (pleased) at (0:3) {};
+      \node [label={90:Unhappy}] (unhappy) at (180:3) {};
+      \node [label={270:Calm}] (calm) at (270:3) {};
+
+      \node [label={90:elated}] (elated) at (45:3) {*};
+      \node [label={90:distressed}] (distressed) at (135:3) {*};
+      \node [label={80:bored}] (bored) at (225:3) {*};
+      \node [label={90:calmed}] (calmed) at (315:3) {*};
+
+      \draw [thick,dotted] (0,0) circle (3cm);
+
+      \draw [thick,dashed] ($(unhappy)+(-0.2,0)$) -- ($(pleased)+(0.2,0)$);
+      \draw [thick] ($(calm)+(0,-0.2)$) -- ($(aroused)+(0,0.2)$);
+
     \end{tikzpicture}
   \end{center}
   
-  \caption{The Affect Circumplex \parencite{LewinsohnMano93}.
-}
-  
+  \caption{The Affect Circumplex \parencite{LewinsohnMano93}.}
+  \label{fig:circumflex}  
 \end{figure}
 
 

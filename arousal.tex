@@ -1,15 +1,16 @@
-\documentclass[jou,11pt]{apa6}
+\documentclass[jou,draftfirst,11pt]{apa6}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{csquotes}
 \usepackage{caption}
+\usepackage{rotating}
 
 \usepackage{tikz}
 \usetikzlibrary{positioning,shapes,arrows,calc}
 \usetikzlibrary{shapes.geometric,shadows,shapes.misc}
-\tikzstyle{every text node part}=[font=\fontsize{8}{9}\selectfont]
+\tikzstyle{every text node part}=[font=\fontsize{10}{11}\selectfont]
 
 \usepackage[
   style=authoryear,
@@ -42,6 +43,9 @@
 }
 
 
+\newcommand{\cellcontent}[1]{\begin{tabular}[t]{@{}l@{}}#1\end{tabular}}
+
+
 
 \title{Arousal and Post Decision Processes: Effects of Experimentally
   Manipulated Arousal on Differentiation and Consolidation Processes.}
@@ -49,10 +53,10 @@
 \shorttitle{Arousal and Post Decision Processes}
 
 \author{Johanna V. Almtoft and Mats O.L. Nyberg}
-\affiliation{University of Lund}
+\affiliation{Departement of Psychology, University of Lund}
 
-\authornote{Authornote}
-\note{Note}
+%\authornote{Authornote}
+%\note{Note}
 
 
 \abstract{This study investigates experimentally manipulated arousal influence
@@ -595,7 +599,7 @@ occur following manipulated arousal? In case of initial value
 conflicts between the choice alternatives,  how are they solved by
 decision makers with different levels of arousal?
 
-\paragraph{Hypothesis} Following hypothesis will be tested: Manipulated arousal
+\subsubsection{Hypothesis} Following hypothesis will be tested: Manipulated arousal
 will lead decision makers to decrease their cognitive effort in
 evaluating the alternatives of a decision making problem in the pre
 decision phase to their decision.  This should affect the decision
@@ -631,7 +635,7 @@ Clas Ohlsson, PULSE BEEP, which use an active IR sensor to measure
 pulse rate in the bloodflow on the left index finger.  The sound
 system was disconnected to avoid interference.
 
-\paragraph{Forms} Six different forms were used.  One form (see Appendix A)
+\subsubsection{Forms} Six different forms were used.  One form (see Appendix A)
 consisted of four VAS scales, (all VAS scales; visual analogue scales,
 used in the experiment were one hundred millimetres) labelled with the
 attribute names.  They were anchored from ``unimportant'' to ``important''
@@ -666,7 +670,7 @@ self report of ``how active they were during the decision task'' and the
 extent to which this influenced the decision task.
 
 
-\paragraph{Mood questionnaire} 
+\subsubsection{Mood questionnaire} 
 A mood questionnaire (see Appendix G) was used
 consisting of twenty-four items.  The items were grouped by the eight
 octants in Mano's Affect Circumplex.  Each item consisted of mood
@@ -767,6 +771,7 @@ the theory and hypotheses underlying the experiment.
 
 \section{Results}
 
+
 Results showed no effects in line with the predictions made in our hypothesis.
 All changes in attractiveness as well as mood were interpreted as
 changes in millimetres of the participants estimates on the
@@ -783,7 +788,7 @@ B'' into categories ``chosen'' and ``not chosen'' according to the
 participant's choice.
 
 
-Heart rates
+\subsection{Heart rates}
 
 During the first occasion, the participants had a heart rate measure
 taken three times. The participants in the control condition showed an
@@ -793,7 +798,7 @@ in Figure 2.  The difference in heart rate decreased in the second and
 third measurements compared to the first messurement.  The differences
 between the conditions were not significant.
 
-Mood assessment
+\subsection{Mood assessment}
 
 The twenty-four scores obtained from each mood questionnaire  were
 sorted into groups by three according to the octant (mood state) they
@@ -814,18 +819,12 @@ elation implies a decrease.
 
 
 
+\subsection{Consolidation effects}
+\input{table5}
+\input{table2}
+\input{table3}
+\input{table4}
 
-
-
-
-
-
-
-
-
-
-
-Consolidation effects
 
 The consolidation effect of each participant was obtained from the
 attractiveness differences between the two apartment's attribute
@@ -845,7 +844,7 @@ attributes, the effect is somewhat reversed and stronger in the
 experiment condition than in the control condition as well.
 
 
-Interaction effects
+\subsection{Interaction effects}
 
 In the absence of differences of the arousal manipulation and
 consolidation between the two conditions, interaction effects were
@@ -858,8 +857,9 @@ point each for each ``yes'' to the questions whether the choice of
 apartment was a current issue as well as whether it was an important
 issue to the decision maker. This yielded a 3 grade commitment scale.
 The consolidation effect with respect to the commitment score as well
-as experimental condition are shown in Table 2. No significant
-differences were found.
+as experimental condition are shown in Table \ref{tab:commitment}. No
+significant differences were found.
+
 
 A value conflict was defined as a choice in which one of the two most
 important attributes of the chosen alternative had attribute values
@@ -871,7 +871,7 @@ differences were found.
 An ``activation'' score of each participant was obtained from the ``how
 active'' and ``how this influenced the decision'' VAS scale questions
 given at the first occasion.   No significant differences were found
-(Tukey's, $\alpha$=.05, df = 50) Table 3 (see Appendix H).
+(Tukey's, $\alpha$=.05, df = 50) Table \ref{tab:activation}.
 
 The consolidation effect of participants following their ability to
 remember their choice on the second occasion (see Appendix E) as well
@@ -883,10 +883,10 @@ arousal during the experiment. This was obtained from the arousal
 difference as obtained from the mood questionnaire.  Participants were
 grouped according to whether they had an increase or decrease in
 arousal.  Differences between groups were tested (Tukey's, $\alpha$=.05, df =
-52) but no significant differences were found Tabl 4(see Appendix H).
+52) but no significant differences were found Table \ref{tab:arousal}.
 
 
-Restructuring of importance 
+\subsection{Restructuring of importance}
 
 The difference between the two importance values of each attribute
 reported on the two occasions (Appendix A, Appendix E) was measured
@@ -894,7 +894,7 @@ and the difference was interpreted as an estimate of participants'
 restructuring. No significant restructuring  of attribute importance
 rank order was found (t-test, $\alpha$=.05, df = 54).  The attribute
 importance rank order of participants following experimental condition
-are shown in Table 5 (see Appendix H).
+are shown in Table \ref{tab:attributeimportance}.
 
 
 \section{Discussion}
