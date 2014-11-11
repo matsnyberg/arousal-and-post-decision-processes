@@ -1,0 +1,39 @@
+
+
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        %y=0.5cm,
+        %bar width=0.4cm,
+        ytick={60,65,70,75,80},
+        grid=major,
+        table/col sep=comma,
+        %ybar,
+        ymin=60, ymax=80,
+        title={Heart rates (means)},
+        xlabel=Meassurement,
+        ylabel=Frequency,
+        xticklabels = {$m_1$,$m_2$,$m_3$},
+        xtick=data,
+        width=0.9\columnwidth,
+        height=40mm,
+        %bar width=20pt,
+        /pgf/number format/fixed,
+        legend style={
+          draw=none,
+          at={(0,0)},
+          anchor=north east,
+          at={(axis description cs:0.5,-0.5)}}
+      ]
+
+      \addplot table [x expr=\coordindex, y=0] {HeartMeans.csv};
+      \addplot table [x expr=\coordindex, y=1] {HeartMeans.csv};
+      \legend{Control,Experiment};
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Heart rate means for the two groups.\label{fig:heartmeans}}  
+\end{figure}
+
+

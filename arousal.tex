@@ -8,9 +8,32 @@
 \usepackage{rotating}
 
 \usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable} 
+
+
 \usetikzlibrary{positioning,shapes,arrows,calc}
 \usetikzlibrary{shapes.geometric,shadows,shapes.misc}
 \tikzstyle{every text node part}=[font=\fontsize{10}{11}\selectfont]
+
+\pgfplotsset{compat=1.11}
+\pgfplotsset{grid style={dashed,black}}
+\pgfplotsset{minor grid style={dashed,red}}
+\pgfplotsset{major grid style={dashed,black}}
+\pgfplotsset{every axis legend/.append style={
+    at={(0,0)},
+    legend cell align=left,
+    anchor=north east}}
+\pgfplotsset{
+  /pgfplots/bar cycle list/.style={
+    /pgfplots/cycle list={%
+      {black,fill=gray!50,mark=none},%
+      {black,fill=gray!30,mark=none},%
+      {black,fill=gray!20,mark=none},%
+    }
+  },
+}
+
 
 \usepackage[
   style=authoryear,
@@ -796,9 +819,14 @@ During the first occasion, the participants had a heart rate measure
 taken three times. The participants in the control condition showed an
 initially higher heart rate than the participants in the experiment
 condition. The heart rate mean values in the two conditions are shown
-in Figure 2.  The difference in heart rate decreased in the second and
-third measurements compared to the first messurement.  The differences
-between the conditions were not significant.
+in Figure~\ref{fig:heartmeans}.  The difference in heart rate
+decreased in the second and third measurements compared to the first
+messurement.  The differences between the conditions were not
+significant.
+
+
+\input{heartmeans}
+
 
 \subsection{Mood assessment}
 
