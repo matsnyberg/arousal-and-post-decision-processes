@@ -16,24 +16,7 @@
 \usetikzlibrary{shapes.geometric,shadows,shapes.misc}
 \tikzstyle{every text node part}=[font=\fontsize{10}{11}\selectfont]
 
-\pgfplotsset{compat=1.11}
-\pgfplotsset{grid style={dashed,black}}
-\pgfplotsset{minor grid style={dashed,red}}
-\pgfplotsset{major grid style={dashed,black}}
-\pgfplotsset{every axis legend/.append style={
-    at={(0,0)},
-    legend cell align=left,
-    anchor=north east}}
-\pgfplotsset{
-  /pgfplots/bar cycle list/.style={
-    /pgfplots/cycle list={%
-      {black,fill=gray!50,mark=none},%
-      {black,fill=gray!30,mark=none},%
-      {black,fill=gray!20,mark=none},%
-    }
-  },
-}
-
+\usepackage{mypgfplotssettings}
 
 \usepackage[
   style=authoryear,
@@ -68,7 +51,8 @@
 
 \newcommand{\cellcontent}[1]{\begin{tabular}[t]{@{}l@{}}#1\end{tabular}}
 
-
+\newcommand{\figur}[1]{Figure~\ref{#1}}
+\newcommand{\tabell}[1]{Table~\ref{#1}}
 
 \title{Arousal and Post Decision Processes: Effects of Experimentally
   Manipulated Arousal on Differentiation and Consolidation Processes.}
@@ -517,8 +501,8 @@ Research have been conducted on the influence of mood on cognitions in
 general.  Some research have focused on the effect of mood in decision
 making.  In studies of the effect of mood on decision making
 processes, Lewinsohn and Mano refers to a multi dimensional mood state
-model \parencite{LewinsohnMano93, Mano94} (see Figure
-\ref{fig:circumflex}), This model
+model \parencite{LewinsohnMano93, Mano94} (see
+\figur{fig:circumflex}), This model 
 is a development of Russel's multi dimensional mood model
 \parencite{Russel78}. In Mano's model mood is described on two main dimensions,
 hedonic tone (pleasure-displeasure) and arousal (arousal-quietness).
@@ -537,7 +521,7 @@ In studying emotions, researchers distinguish experience of emotion
 over time from current emotion \parencite{FiskeTaylor91}. For instance,
 Watson and Tellegen (\cite{WatsonTellegen85}, as cited in \cite{FiskeTaylor91})
 describes' the structure of affect by a two dimensional model, similar
-to Manos' Affect Circumplex model parencite{Mano95}.
+to Manos' Affect Circumplex model \parencite{Mano94}.
 
 In a study, conducted by Lewinsohn and Mano
 (\citeyear{LewinsohnMano93}), subjects were asked to give self reports
@@ -819,7 +803,7 @@ During the first occasion, the participants had a heart rate measure
 taken three times. The participants in the control condition showed an
 initially higher heart rate than the participants in the experiment
 condition. The heart rate mean values in the two conditions are shown
-in Figure~\ref{fig:heartmeans}.  The difference in heart rate
+in \figur{fig:heartmeans}.  The difference in heart rate
 decreased in the second and third measurements compared to the first
 messurement.  The differences between the conditions were not
 significant.
@@ -835,25 +819,25 @@ sorted into groups by three according to the octant (mood state) they
 belonged to and a mean score was calculated for each group of scores.
 A difference between the two scores from each occasion and octant was
 calculated yielding eight ``mood difference scores'' to each
-participant.  The results from this can be seen in Figure 3.  No
-significant differences between the groups were found.  The arousal
-score of the control group dropped, while the experiment group does
-not show such a decrease. These changes corresponds to the changes in
-the counterpart to arousal, quietness.  For the control group there
-are similar changes in the octants distress and elation, which both
-include positive arousal (see the affect circumplex, Figure 1). The
-experiment group, shows contradictive changes in these octants. While
-the changes in distress indicates an increase in arousal changes in
-elation implies a decrease.
+participant.  The results from this can be seen in
+\figur{fig:moodmeans}.  No significant differences between the groups
+were found.  The arousal score of the control group dropped, while the
+experiment group does not show such a decrease. These changes
+corresponds to the changes in the counterpart to arousal, quietness.
+For the control group there are similar changes in the octants
+distress and elation, which both include positive arousal (see the
+affect circumplex, \figur{fig:circumflex}). The experiment group,
+shows contradictive changes in these octants. While the changes in
+distress indicates an increase in arousal changes in elation implies a
+decrease.
+
+
+\input{moodmeans}
 
 
 
 
 \subsection{Consolidation effects}
-\input{table5}
-\input{table2}
-\input{table3}
-\input{table4}
 
 
 The consolidation effect of each participant was obtained from the
@@ -887,7 +871,7 @@ point each for each ``yes'' to the questions whether the choice of
 apartment was a current issue as well as whether it was an important
 issue to the decision maker. This yielded a 3 grade commitment scale.
 The consolidation effect with respect to the commitment score as well
-as experimental condition are shown in Table \ref{tab:commitment}. No
+as experimental condition are shown in \tabell{tab:commitment}. No
 significant differences were found.
 
 
@@ -901,7 +885,7 @@ differences were found.
 An ``activation'' score of each participant was obtained from the ``how
 active'' and ``how this influenced the decision'' VAS scale questions
 given at the first occasion.   No significant differences were found
-(Tukey's, $\alpha$=.05, df = 50) Table \ref{tab:activation}.
+(Tukey's, $\alpha$=.05, df = 50) \tabell{tab:activation}.
 
 The consolidation effect of participants following their ability to
 remember their choice on the second occasion (see Appendix E) as well
@@ -913,7 +897,7 @@ arousal during the experiment. This was obtained from the arousal
 difference as obtained from the mood questionnaire.  Participants were
 grouped according to whether they had an increase or decrease in
 arousal.  Differences between groups were tested (Tukey's, $\alpha$=.05, df =
-52) but no significant differences were found Table \ref{tab:arousal}.
+52) but no significant differences were found \tabell{tab:arousal}.
 
 
 \subsection{Restructuring of importance}
@@ -924,7 +908,7 @@ and the difference was interpreted as an estimate of participants'
 restructuring. No significant restructuring  of attribute importance
 rank order was found (t-test, $\alpha$=.05, df = 54).  The attribute
 importance rank order of participants following experimental condition
-are shown in Table \ref{tab:attributeimportance}.
+are shown in \tabell{tab:attributeimportance}.
 
 
 \section{Discussion}
@@ -1003,7 +987,13 @@ reported arousal and actual arousal in connection with post decision
 processes.
 
 
+\input{table2}
+\input{table3}
+\input{table4}
+\input{table5}
 
 
 \printbibliography[heading=bib]
+
+
 \end{document}

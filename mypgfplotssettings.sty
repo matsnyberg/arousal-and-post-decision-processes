@@ -1,0 +1,28 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{mypgfplotssettings}[1970/08/03 My Pgfplots Settings]
+
+
+\pgfplotsset{compat=1.11}
+
+
+
+%\pgfplotsset{grid style={dashed,black}}
+\pgfplotsset{major grid style={black,dashed}}
+\pgfplotsset{minor grid style={dashed}}
+
+
+\pgfplotsset{every axis legend/.append style={
+    at={(0,0)},
+    legend cell align=left,
+    anchor=north east}}
+
+
+\pgfplotsset{
+  /pgfplots/bar cycle list/.style={
+    /pgfplots/cycle list={%
+      {blue,fill=blue!30!white,mark=none},%
+      {red,fill=red!30!white,mark=none},%
+      {orange,fill=orange!30!white,mark=none},%
+    }
+  },
+}

@@ -1,0 +1,46 @@
+
+
+
+
+\begin{figure}[!ht]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        xbar,
+        width=0.9\columnwidth,
+        height=9cm,
+        bar width=1.8mm,
+        /pgf/number format/fixed,
+        table/col sep=comma,
+        title={Mood changes (means)},
+        xlabel=Change,
+        xtick={-7,...,5},
+        minor x tick num={1},
+        minor y tick num={1},
+        ytick={0,...,7},% <- added code
+        yticklabels from table={MoodMeans.csv}{mapped},
+        xmajorgrids=true,
+        %xminorgrids=true,
+        legend style={
+          draw=none,
+          at={(0,0)},
+          anchor=north east,
+          at={(axis description cs:0.5,-0.2)}}
+      ]
+
+      \addplot table [y expr=\coordindex, x=0] {MoodMeans.csv};
+      \addplot table [y expr=\coordindex, x=1] {MoodMeans.csv};
+      \legend{Control,Experiment};
+
+      \draw[ultra thin]
+      (axis cs:0, \pgfkeysvalueof{/pgfplots/ymin})
+      -- (axis cs:0, \pgfkeysvalueof{/pgfplots/ymax});
+
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Means of ``mood changes'' for the two groups.\label{fig:moodmeans}}  
+\end{figure}
+
+
+
+

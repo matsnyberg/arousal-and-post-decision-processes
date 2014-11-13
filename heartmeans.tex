@@ -1,7 +1,7 @@
 
 
 
-\begin{figure}
+\begin{figure}[!ht]
   \centering
   \begin{tikzpicture}
     \begin{axis}[
@@ -11,7 +11,7 @@
         grid=major,
         table/col sep=comma,
         %ybar,
-        ymin=60, ymax=80,
+        ymin=70, ymax=80,
         title={Heart rates (means)},
         xlabel=Meassurement,
         ylabel=Frequency,
@@ -21,6 +21,7 @@
         height=40mm,
         %bar width=20pt,
         /pgf/number format/fixed,
+        cycle list name=exotic,
         legend style={
           draw=none,
           at={(0,0)},

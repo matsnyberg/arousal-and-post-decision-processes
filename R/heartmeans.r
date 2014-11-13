@@ -11,3 +11,5 @@ heartMeans$myfactor <- factor(row.names(heartMeans))
 
 #str(heartMeans) # Check the column types
 write.csv(heartMeans, file="HeartMeans.csv",row.names=FALSE,quote=FALSE)
+
+
