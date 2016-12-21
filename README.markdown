@@ -1,3 +1,5 @@
+Arousal and Post Decision Processes: Effects of Experimentally Manipulated Arousal on Differentiation and Consolidation Processes
+=================================================================================================================================
 
 This is a LaTeX:ed version of me and Johanna Almtoft's bachelor thesis
 in psychology, submitted in 1996.
