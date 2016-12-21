@@ -1,0 +1,57 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{dialysboken-sections}[2014/08/03 Dialysboken sections style]
+
+
+\RequirePackage[english]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{csquotes}
+\RequirePackage{caption}
+\RequirePackage{rotating}
+
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
+\RequirePackage{pgfplotstable} 
+
+
+\usetikzlibrary{positioning,shapes,arrows,calc}
+\usetikzlibrary{shapes.geometric,shadows,shapes.misc}
+\tikzstyle{every text node part}=[font=\fontsize{10}{11}\selectfont]
+
+\RequirePackage{mypgfplotssettings}
+
+\RequirePackage[
+  style=authoryear,
+  dashed=false,
+  bibstyle=authortitle,
+  backend=biber]{biblatex}
+\renewcommand\nameyeardelim{, }
+
+\defbibheading{bib}[References]{%
+                \newpage\section{#1}%
+                \markboth{#1}{#1}}
+
+
+\AtBeginBibliography{%
+  \renewcommand*{\finalnamedelim}{%
+    \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+    \addspace\&\space}%
+}
+
+
+\let\origparencite\parencite
+\renewrobustcmd{\parencite}{%
+  \AtNextCite{%
+  \renewcommand*{\finalnamedelim}{%
+    \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+    \addspace\&\space}%
+  }%
+  \origparencite%
+}
+
+
+\newcommand{\cellcontent}[1]{\begin{tabular}[t]{@{}l@{}}#1\end{tabular}}
+
+\newcommand{\figur}[1]{Figure~\ref{#1}}
+\newcommand{\tabell}[1]{Table~\ref{#1}}
