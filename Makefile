@@ -1,7 +1,7 @@
 
 FILES = $(shell ls *.tex *.sty *.bib)
 GENFILES = $(wildcard *.aux *.bbl *.bcf *.blg *.fff *.log *.pdf *.run.xml *.ttt)
-
+LATEX=pdflatex
 
 
 
@@ -14,10 +14,10 @@ clean:
 
 
 %.pdf : %.tex HeartMeans.csv MoodMeans.csv
-	pdflatex $<
+	$(LATEX) $<
 	biber $*.bcf
-	pdflatex $<
-	pdflatex $<
+	$(LATEX) $<
+	$(LATEX) $<
 
 
 HeartMeans.csv: csv/HeartRateT.csv
