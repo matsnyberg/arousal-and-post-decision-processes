@@ -46,7 +46,7 @@ Prerequisites
 To build the PDFs you need
 
 + `make` build tool
-+ A recent TeX distribution w/ `pdflatex`/`xetex` 
++ A recent TeX distribution w/ `pdflatex`/`xelatex` 
 + R distribution
 
 Build
