@@ -1,7 +1,7 @@
 Arousal and Post Decision Processes: Effects of Experimentally Manipulated Arousal on Differentiation and Consolidation Processes
 =================================================================================================================================
 
-This is a LaTeX:ed version of me and Johanna Almtoft's bachelor thesis
+This is a LaTeX:ed version of mine and Johanna Almtoft's bachelor thesis
 in psychology, submitted in 1996.
 
 The title of the thesis is Arousal and Post Decision Processes:
@@ -39,12 +39,21 @@ __Keywords:__ Differentiation and Consolidation Theory, Arousal, Mood,
 
 
 
+
+Prerequisites
+-------------
+
+To build the PDFs you need
+
++ `make` build tool
++ A recent TeX distribution w/ `pdflatex`/`xetex` 
++ R distribution
+
 Build
 -----
 
-Issue `make` at a POSIX bash (shell) prompt. This should build both a
-manuscript version and a (more readable) "journal" version of the
-text.
+Build with the `make` command at a POSIX bash (shell) prompt. This
+should build both a manuscript version and a (more readable) "journal"
+version of the text.
 
-You need to have a fairly current TeX distribution and R installed.
 
