@@ -1,8 +1,8 @@
 
 FILES = $(shell ls *.tex *.sty *.bib)
 GENFILES = $(wildcard *.aux *.bbl *.bcf *.blg *.fff *.log *.pdf *.run.xml *.ttt)
-LATEX=pdflatex
-
+LATEX=xelatex
+LATEXMK=latexmk
 
 
 
