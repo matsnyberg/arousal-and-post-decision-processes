@@ -1,6 +1,6 @@
 
 FILES = $(shell ls *.tex *.sty *.bib)
-GENFILES = $(wildcard *.aux *.bbl *.bcf *.blg *.fff *.log *.pdf *.run.xml *.ttt *.csv)
+GENFILES = $(wildcard *.aux *.bbl *.dvi *.out *.fls *.fdb_latexmk *.xdv *.bcf *.blg *.fff *.log *.pdf *.run.xml *.ttt *.csv)
 LATEX=xelatex
 LATEXMK=latexmk
 
