@@ -1,6 +1,6 @@
 
 FILES = $(shell ls *.tex *.sty *.bib)
-GENFILES = $(wildcard *.aux *.bbl *.bcf *.blg *.fff *.log *.pdf *.run.xml *.ttt)
+GENFILES = $(wildcard *.aux *.bbl *.bcf *.blg *.fff *.log *.pdf *.run.xml *.ttt *.csv)
 LATEX=xelatex
 LATEXMK=latexmk
 
@@ -13,7 +13,7 @@ clean:
 
 
 
-%.pdf : %.tex HeartMeans.csv MoodMeans.csv
+%.pdf : %.tex HeartMeans.csv MoodMeans.csv Consolidation.csv
 	$(LATEX) $<
 	biber $*.bcf
 	$(LATEX) $<
@@ -25,3 +25,6 @@ HeartMeans.csv: csv/HeartRateT.csv
 
 MoodMeans.csv: csv/MoodTableT.csv
 	R/moodMeans.r
+
+Consolidation.csv: csv/RawData.csv 
+	R/consolidation.r
